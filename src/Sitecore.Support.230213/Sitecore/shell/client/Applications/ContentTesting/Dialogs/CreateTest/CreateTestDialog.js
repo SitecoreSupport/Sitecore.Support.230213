@@ -534,6 +534,13 @@
             var self = this;
             var successFunc = function () {
                 self.ServerProgressIndicator.set("isBusy", false);
+
+                // FIX 230213 begin
+
+                window.top.location.reload(true);
+
+                // FIX 230213 end
+
                 self.closeDialog("yes");
             };
 
